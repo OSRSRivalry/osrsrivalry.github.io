@@ -5,33 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSRS Rivalry</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+            min-height: 100vh;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #222;
+        }
+        nav .logo {
+            font-size: 17px;
+            font-weight: 800;
+            color: #c8a951;
+            letter-spacing: 0.3px;
+        }
+        nav a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 28px;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: #c8a951; }
+        .hero {
+            max-width: 680px;
+            margin: 100px auto;
+            padding: 0 24px;
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(200,169,81,0.1);
+            border: 1px solid rgba(200,169,81,0.25);
+            color: #c8a951;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 28px;
         }
         h1 {
-            color: #333;
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
         }
-        p {
-            color: #666;
+        h1 span { color: #c8a951; }
+        .subtitle {
+            font-size: 18px;
+            color: rgba(255,255,255,0.5);
             line-height: 1.6;
+            margin-bottom: 44px;
+        }
+        .app-store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #c8a951;
+            color: #000;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 800;
+            transition: opacity 0.2s;
+        }
+        .app-store-btn:hover { opacity: 0.85; }
+        .features {
+            max-width: 680px;
+            margin: 80px auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .feature {
+            background: #161616;
+            border: 1px solid #222;
+            border-radius: 16px;
+            padding: 24px;
+        }
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        .feature h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .feature p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.5;
+        }
+        footer {
+            border-top: 1px solid #1a1a1a;
+            padding: 32px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        footer p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.25);
+        }
+        footer a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+        footer a:hover { color: #c8a951; }
+        @media (max-width: 600px) {
+            nav { padding: 16px 20px; }
+            h1 { font-size: 36px; }
+            .features { grid-template-columns: 1fr; }
+            footer { flex-direction: column; align-items: flex-start; }
+            footer a { margin-left: 0; margin-right: 16px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>OSRS Rivalry</h1>
-        <p>Welcome to OSRS Rivalry</p>
+
+<nav>
+    <span class="logo">⚔️ OSRS Rivalry</span>
+    <div>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
     </div>
+</nav>
+
+<div class="hero">
+    <div class="badge">Available on the App Store</div>
+    <h1>Track. Compete.<br><span>Dominate.</span></h1>
+    <p class="subtitle">
+        The ultimate companion app for Old School RuneScape players.
+        Set up rivalries, track your clan, and find out who's really grinding.
+    </p>
+    <a href="https://apps.apple.com/app/osrs-rivalry/idYOUR_APP_ID" class="app-store-btn">
+        ⬇︎ &nbsp;Download on the App Store
+    </a>
+</div>
+
+<div class="features">
+    <div class="feature">
+        <div class="feature-icon">🔥</div>
+        <h3>Rivalries</h3>
+        <p>Challenge any player head-to-head across every skill and boss.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">🏆</div>
+        <h3>Leaderboard</h3>
+        <p>Rank your clan by total level, XP, combat, or any skill.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">🚩</div>
+        <h3>Skill Races</h3>
+        <p>Start a timed XP race in any skill. See who grinds harder.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>Progress Snapshots</h3>
+        <p>Capture stats and compare gains over days, weeks, or months.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">🔔</div>
+        <h3>Notifications</h3>
+        <p>Get alerted when rivals level up or go quiet.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">⛵</div>
+        <h3>Skilling Guide</h3>
+        <p>Training methods for every skill including Sailing.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 OSRS Rivalry. Not affiliated with Jagex Ltd.</p>
+    <div>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:support@osrsrivalry.app">Contact</a>
+    </div>
+</footer>
+
 </body>
 </html>
